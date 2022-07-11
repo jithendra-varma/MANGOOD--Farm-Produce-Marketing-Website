@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+}
+
+/*--------------------Header--------------------*/
+
+.header {
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(mangoimages/homemango.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {  /*---Header-Nav-Links---*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+nav img {
+    width: 250px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fas {
+  display: none;
+}
+
+@media (max-width: 768px) { /*---Header-Nav-Links-for-768px---*/
+  nav {
+    padding: 10px 5px;
+  }
+  nav img {
+    width: 200px;
+  }
+  .nav-links ul li a {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {  /*---Header-Nav-Links-for-480px---*/
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #ff9100;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fas {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+.text-box {  /*---Header-Text-Box---*/
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 64px;
+    font-family: 'Merriweather', sans-serif;   
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #ff9100;
+    background: #ff9100;
+    transition: 1s;
+}
+
+@media (max-width: 768px) { /*---Header-Text-Box-for-768px---*/
+  .text-box h1 {
+    font-size: 54px;
+  }
+  .hero-btn {
+    font-size: 15px;
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 384px) { /*---Header-Text-Box-for-384px---*/
+  .text-box h1 {
+    font-size: 44px;
+  }
+}
+
+/*--------------------Nutritional-Values--------------------*/
+
+.values {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.values h2 {
+    margin: 35px 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+.values p {
+    font-size: 16px;
+}
+
+.values div {
+    margin-top: 30px;
+    box-shadow: 0px 0px 8px red;
+    border: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.values table {
+    border-collapse: collapse;
+}
+
+.value-head {
+    border: 1px solid black;
+    background-color: #99c928;
+}
+
+.values table th,td {
+    padding: 0px 20px;
+}
+
+@media (max-width: 768px) { /*---Nutritional-values-for-768px---*/
+  .values h2 {
+    margin: 30px 5px;
+    font-size: 35px;
+  }
+  .values p {
+  margin: 0px 5px;
+  }
+}
+
+@media (max-width: 384px) {  /*---Nutritional-values-for-384px---*/
+    .values h2 {
+        margin: 25px 5px;
+        font-size: 30px;
+    }
+}
+
+/*--------------------Fact-Sheet--------------------*/
+
+.facts {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.facts h2 {
+    margin: 35px 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+.pg {
+    margin: 40px 100px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pg div img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) { /*---Fact-Sheet-for-768px---*/
+  .facts h2 {
+    margin: 30px 5px;
+    font-size: 35px;
+  }
+  .pg {
+    margin: 30px 50px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 384px) {  /*---Fact-Sheet-for-384px---*/
+    .facts h2 {
+        margin: 25px 5px;
+        font-size: 30px;
+    }
+    .pg {
+        margin: 20px 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .pg div img {
+      width: 50%;
+      height: 25vh;
+    }
+}
+
+/*--------------------Mango-Varieties--------------------*/
+
+.varieties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.varieties h2 {
+    margin: 0px 5px 35px;
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+}
+
+.varieties h3 {
+    margin: 25px 5px;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+}
+
+@media (max-width: 768px) { /*---Mango-Varieties-for-768px---*/
+  .varieties h2 {
+    margin: 0px 5px 30px;
+    font-size: 35px;
+  }
+  .varieties p {
+  margin: 0px 5px;
+  }
+}
+
+@media (max-width: 384px) { /*---Mango-Varieties-for-384px---*/
+  .varieties h2 {
+    margin: 0px 5px 25px;
+    font-size: 30px;
+  }
+  .varieties p {
+  margin: 0px 5px;
+  }
+}
+
+.container1 {  /*---Mango-varieties-Container-1---*/
+    max-width: 100%;
+    height: auto;
+    margin: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkred;
+    border-radius: 20px;
+    background-color: #eae9e0;
+    box-shadow: 0px 0px 15px red;
+}
+
+.container1 .ig-image {
+    width: 33.4%;
+    margin: 5px 5px 0px 5px;
+}
+
+.container1 .ig-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.container1 .ct-content {
+    width: 66.6%;
+    padding: 15px;  
+}
+
+.container1 .ct-content h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container1 .ct-content p {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) { /*---Mango-varieties-Container1-for-768px---*/
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+  }
+  .container1 .ig-image {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .container1 .ig-image img {
+    width: 50%;
+    height: 50vh;
+    border-radius: 15px;
+  }
+  .container1 .ct-content {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 384px) { /*---Mango-varieties-Container1-for-384px---*/
+  .container1 {
+    margin: 10px 25px;
+  }
+  .container1 .ig-image {
+    margin: 15px 15px 0px;
+  }
+  .container1 .ig-image img {
+    width: 90%;
+  }
+}
+
+.container2 {  /*---Mango-varieties-Container2---*/
+    max-width: 100%;
+    height: auto;
+    margin: 30px 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkred;
+    border-radius: 20px;
+    background-color: #eae9e0;
+    box-shadow: 0px 0px 15px red;
+}
+
+.container2 .ig-image {
+    width: 33.4%;
+    margin: 5px 5px 0px 5px;
+}
+
+.container2 .ig-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.container2 .ct-content {
+    width: 66.6%;
+    padding: 15px;  
+}
+
+.container2 .ct-content h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.container2 .ct-content p {
+    font-weight: 500;
+}
+
+@media (max-width: 768px) { /*---Mango-varieties-Container2-for-768px---*/
+  .container2 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+  }
+  .container2 .ig-image {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .container2 .ig-image img {
+    width: 50%;
+    height: 50vh;
+    border-radius: 15px;
+  }
+  .container2 .ct-content {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 384px) { /*---Mango-varieties-Container2-for-768px---*/
+  .container2 {
+    margin: 10px 25px;
+  }
+  .container2 .ig-image {
+    margin: 15px 15px 0px;
+  }
+  .container2 .ig-image img {
+    width: 90%;
+  }
+}
+
+/*--------------------Footer--------------------*/
+
+footer {
+    max-width: 100%;
+    height: auto;
+}
+
+.question1 { /*---Footer-Question-1---*/
+    max-width: 100%;
+    width: 90%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(mangoimages/aboutmango.jpg);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.question-text1 {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.question-text1 p {
+    font-size: 30px;
+}
+
+.question-text1 a {
+    margin: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 6px 18px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.question-text1 a:hover {
+    border: 1px solid #ff9100;
+    background: #ff9100;
+    transition: 1s;
+}
+
+@media (max-width: 768px) {  /*---Footer-Question-1-for-768px---*/
+  .question1 {
+    margin-top: 20px;
+  }
+  .question-text1 p {
+    font-size: 25px;
+  }
+  .question-text1 a {
+    margin: 15px;
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 384px) {  /*---Footer-Question-1-for-384px---*/
+  .question1 {
+    margin-top: 15px;
+  }
+  .question-text1 p {
+    font-size: 20px;
+  }
+  .question-text1 a {
+    margin: 10px;
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+}
+
+.question2 { /*---Footer-Question-2---*/
+    max-width: 100%;
+    width: 90%;
+    height: 50vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(mangoimages/contactmango.jpg);
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.question-text2 {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.question-text2 p {
+    font-size: 30px;
+}
+
+.question-text2 a {
+    margin: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 6px 18px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.question-text2 a:hover {
+    border: 1px solid #ff9100;
+    background: #ff9100;
+    transition: 1s;
+}
+
+@media (max-width: 768px) {  /*---Footer-Question-2-for-768px---*/
+  .question2 {
+    margin-top: 20px;
+  }
+  .question-text2 p {
+    font-size: 25px;
+  }
+  .question-text2 a {
+    margin: 15px;
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 384px) {  /*---Footer-Question-2-for-384px---*/
+  .question2 {
+    margin-top: 15px;
+  }
+  .question-text2 p {
+    font-size: 20px;
+  }
+  .question-text2 a {
+    margin: 10px;
+    padding: 6px 18px;
+    font-size: 15px;
+  }
+}
+
+.foot {  /*---Footer-foot---*/
+    background-color: #eae9e0;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links .fab,.far{
+  color: #1873eb;
+  font-size: 25px;
+  margin: 0px 5px;
+}
+
+#p1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#p2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*-------------------TheEnd--------------------*/
+
+.hit {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*--------------------About-Header--------------------*/
+
+.about-header {
+    min-height: 50vh;
+    max-width: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(mangoimages/aboutmango.jpg);
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.about-text-box {
+    font-size: 30px;
+    margin: auto;
+}
+
+/*--------------------About-Us--------------------*/
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0px 50px;
+    position: relative;
+}
+
+.about-us h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about-us p {
+    padding: 15px;
+}
+
+.about-us div {
+    text-align: center;
+}
+
+.about-us .hero-btn {
+    color: black;
+    border-color: black;
+    font-weight: 900;
+    margin-left: 40%;
+}
+
+@media (max-width: 768px) { /*---About-Us-for-768px---*/
+  .about-us {
+    width: 90%;
+  }
+  .about-us h2 {
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 384px) { /*---About-Us-for-384px---*/
+  .about-us {
+    width: 95%;
+  }
+  .about-us h2 {
+    font-size: 30px;
+  }
+  .about-us .hero-btn {
+      margin-left: 35%;
+  }
+}
+
+
+/*-------------------TheEnd--------------------*/
+
+
+/*-------------------Contact-Header--------------------*/
+
+.contact-header {
+    min-height: 50vh;
+    max-width: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(mangoimages/contactmango.jpg);
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/*--------------------Location--------------------*/
+
+.location {
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location-map {
+    border: 3px solid black;
+    padding: 5px 5px 0px 5px;
+}
+
+.location iframe {
+    max-width: 100%;
+    width: 100%;
+}
+
+/*--------------------Contact-Us--------------------*/
+
+.contact-us {
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      'left right';
+}
+
+.contact-row1 {
+    grid-area: left;
+    margin: auto;
+}
+
+.contact-row2 {
+    grid-area: right;
+}
+
+.contact-col {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.contact-col i {
+    color: black;
+    font-size: 50px;
+}
+
+.contact-col span {
+    padding-left: 20px;
+}
+
+.contact-col h2 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.contact-row2 form {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-row2 input, .contact-row2 textarea {
+    max-width: 100%
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.contact-row2 .hero-btn {
+    color: black;
+    border-color: black;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) { /*---contact-us-for-768px---*/
+  .location{
+    max-width: 100%;
+    width: 90%;
+    padding: 40px 0px;
+  }
+  .contact-us {
+    max-width: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+      'left'
+      'right';
+  } 
+}
