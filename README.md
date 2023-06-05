@@ -1,9 +1,8 @@
+# MANGOOD
 
-# MANGOOD Farm Produce Marketing Website
+The MANGOOD is a web application that showcases and promotes the various mango varieties produced in the village of K.B.R.Puram, located in the Chittoor District of Andhra Pradesh, India.
 
-The MANGOOD Farm Produce Marketing Website is a web application that showcases and promotes the various mango varieties produced in the village of K.B.R.Puram, located in the Chittoor District of Andhra Pradesh, India.
-
-This repository contains the source code and associated files for the MANGOOD Farm Produce Marketing Website. It provides information about the mango varieties, the village, and facilitates contact between potential customers and the farmers.
+This repository contains the source code and associated files for the MANGOOD Website. It provides information about the mango varieties, the village, and facilitates contact between potential customers and the farmers.
 
 ## Features
 
@@ -36,6 +35,10 @@ git clone https://github.com/jithendra-varma/MANGOOD--Farm-Produce-Marketing-Web
 2. Open the project folder.
 
 3. Open the desired web page (e.g., mango.html) in a web browser to view the website locally.
+
+## Website Hosting
+
+The MANGOOD Farm Produce Marketing Website described in this repository is hosted at [https://mangoodjithu.000webhostapp.com/](https://mangoodjithu.000webhostapp.com/).
 
 ## Contributions
 
